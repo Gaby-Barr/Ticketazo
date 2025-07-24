@@ -6,6 +6,7 @@ describe('Crear usuario por formulario', () => {
     var Email = ''
     var Contr = ''
     
+    cy.intercept('POST','/api/backend/register/register-user').as('SuccesReg')
     cy.visit('	https://vps-3696213-x.dattaweb.com/')
     cy.get('.justify-end > .text-sm').click()
     cy.get('[data-cy="btn-register-user"]').click()
@@ -74,10 +75,10 @@ describe('Crear usuario por formulario', () => {
         }
 
     cy.get('[data-cy="select-provincia"]').click()
-    cy.get('li[role="option"]').eq(1).click();
+    cy.get('li[role="option"]').eq(0).click();
 
     cy.get('[data-cy="select-localidad"]').click()
-    cy.get('li[role="option"]').eq(1).click();
+    cy.get('li[role="option"]').eq(0).click();
 
     cy.get('[data-cy="input-email"]').type(Email_Aleatorio())      
 
@@ -111,7 +112,7 @@ describe('Crear usuario por formulario', () => {
 
             var text2 = "";
             var possible = "abcdefghijklmnopqrstuvwxyz";
-            for (var i = 0; i < 6; i++)
+            for (var i = 0; i < 5; i++)
             text2 += possible.charAt(Math.floor(Math.random() * possible.length));
 
             var text3 = "";
@@ -119,16 +120,30 @@ describe('Crear usuario por formulario', () => {
             for (var i = 0; i < 1; i++)
             text2 += possible.charAt(Math.floor(Math.random() * possible.length));
 
-            Contr = text1 + text2 + text3 ;
+            var text4 = "";
+            var possible = "!@#$%^&*.";
+            for (var i = 0; i < 1; i++)
+            text2 += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            Contr = text1 + text2 + text3 + text4;
 
         return Contr;
         }
 
     cy.get('[data-cy="input-repetir-password"]').type(Contr)
 
+    cy.get('[id^=react-aria]').eq(19).type('12')
+    cy.get('[id^=react-aria]').eq(20).type('09')
+    cy.get('[id^=react-aria]').eq(21).type('2002')
+    
+    cy.get('[data-cy="btn-registrarse"]').click()
+
+    cy.wait('@SuccesReg').then((interception) => {
+        expect(interception.response.statusCode).to.equal(201)
+    })
+
     cy.writeFile('cypress/fixtures/UsuarioAleatorioGenerado.json', { nombre:Nombre, email:Email, contra:Contr})
 
 })
-
 
 })
