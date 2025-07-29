@@ -7,7 +7,7 @@ describe('Sesiones', () => {
         })
     })
 
-    it('Inicio de sesion', () => {
+    it('Compra entrada Gratuita', () => {
 
         cy.intercept('POST','/api/backend/qr/generate-gratuita').as('SuccesCom')
         cy.intercept('POST','/api/backend/auth/login').as('SuccesIni')
@@ -29,7 +29,7 @@ describe('Sesiones', () => {
 
         cy.get('button.bg-orange-500').each(($el, index) => {
             if (index < 4) {
-            cy.wait(500)
+            cy.wait(1000)
             cy.wrap($el).click()
             }
         })
@@ -41,9 +41,5 @@ describe('Sesiones', () => {
         cy.wait('@SuccesCom').then((interception) => {
             expect(interception.response.statusCode).to.equal(200)
         })
-
-        //cy.get('button[aria-label="Toggle menu"]').click();
-        //cy.get(':nth-child(3) > .pb-4').click()
-
     })
 })
