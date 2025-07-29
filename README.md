@@ -10,7 +10,7 @@ Por Gabriela Barros
 
 <h3>TC-025</h3>
 
->En este caso automizado se realizan el caso de prueba del siguiente [excel](https://docs.google.com/spreadsheets/d/e/2PACX-1vSgh8U62CBFYF8_RVQovLHCdL49xSBdfOeqpDpgxgYBXZunpY7BTKVj594ASnBzyh_NH_PUYdkIAO0L/pubhtml?gid=0) descrito en el titulo, en el mismo se realiza el flujo de compra de una entrada gratuita. Para verificar que el proceso se completo, toma como finalizacion valida de el proceso un POST 400.
+>En este caso automizado se realizan el caso de prueba del siguiente [excel](https://docs.google.com/spreadsheets/d/e/2PACX-1vSgh8U62CBFYF8_RVQovLHCdL49xSBdfOeqpDpgxgYBXZunpY7BTKVj594ASnBzyh_NH_PUYdkIAO0L/pubhtml?gid=0) descrito en el titulo, en el mismo se realiza el flujo de compra de una entrada gratuita. Para verificar que el proceso se completo, toma como finalizacion valida de el proceso un POST 200.
 
 <h3>TTC-036-37-38-40-41</h3>
 
