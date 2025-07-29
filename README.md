@@ -34,4 +34,9 @@ Por Gabriela Barros
   [Tablero Trello](https://trello.com/b/CbSaQwQX/tablero-de-pruebas-ticketazo)
  
   </li>
+  <li>
+    
+  [Documento Funcional](https://boryak.notion.site/Documento-Funcional-236cb216fadf805180dece309086e23b)
+ 
+  </li>
 <ul>
