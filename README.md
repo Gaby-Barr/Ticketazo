@@ -14,7 +14,7 @@ Por Gabriela Barros
 
 <h3>TTC-036-37-38-40-41</h3>
 
->En este caso automatizado se realizan los casos de prueba del siguiente [excel](https://docs.google.com/spreadsheets/d/e/2PACX-1vSgh8U62CBFYF8_RVQovLHCdL49xSBdfOeqpDpgxgYBXZunpY7BTKVj594ASnBzyh_NH_PUYdkIAO0L/pubhtml?gid=0) descritos en el titulo, dividido en 3 secciones: Creacion de un evento, aprobacion del mismo y verificacion de la creacion.
+>En este caso automatizado se realizan los casos de prueba del siguiente [excel](https://docs.google.com/spreadsheets/d/e/2PACX-1vSgh8U62CBFYF8_RVQovLHCdL49xSBdfOeqpDpgxgYBXZunpY7BTKVj594ASnBzyh_NH_PUYdkIAO0L/pubhtml?gid=0) descritos en el titulo, dividido en 3 secciones: Creacion de un evento, aprobacion del mismo y verificacion de la creacion. El caso automatizado puede ejecutarse perpetuamente ya que le dara un nombre irrepetible a cada evento nuevo creado.
 
 <h3>Recursos</h3>
 
